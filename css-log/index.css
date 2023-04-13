@@ -372,6 +372,13 @@ header .turn-x > :last-child {
 .articles__container > :not(:last-child) {
   margin-bottom: 50rem;
 }
+.articles__container .article {
+  transition: all 250ms ease-in-out;
+}
+.articles__container .article:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+}
 .articles__container .article div.img {
   width: 100%;
   height: 200rem;
@@ -396,7 +403,7 @@ header .turn-x > :last-child {
   transition: all 250ms ease-in-out;
 }
 .articles__container .article__texts h3:hover {
-  color: hsl(192, 70%, 51%);
+  color: hsl(136, 65%, 51%);
 }
 .articles__container .article__texts p {
   color: hsl(233, 8%, 62%);
@@ -432,14 +439,11 @@ footer {
 footer .footer-L .social-links-con .social-links {
   margin-top: 30rem;
 }
-footer .footer-L .social-links-con .social-links a {
-  cursor: pointer;
-}
-footer .footer-L .social-links-con .social-links img {
-  width: 22rem;
-}
 footer .footer-L .social-links-con .social-links :not(:last-child) {
   margin-right: 10rem;
+}
+footer .footer-L .social-links-con .social-links a:hover path {
+  fill: hsl(136, 65%, 51%);
 }
 footer .footer-L .nav-links-L,
 footer .footer-L .nav-links-R {

@@ -17,16 +17,15 @@ footer {
       .social-links {
         margin-top: 30rem;
 
-        a {
-          cursor: pointer;
-        }
-        
-        img {
-          width: 22rem;
-        }
-
         :not(:last-child) {
           margin-right: 10rem;
+        }
+        
+        a:hover {
+          
+          path {
+            fill: v.$lime-green;
+          }
         }
       }
     }

@@ -24,6 +24,12 @@
     }
 
     .article {
+      transition: all 250ms ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.04);
+      }
 
       div.img {
         width: 100%;
@@ -52,7 +58,7 @@
           transition: all 250ms ease-in-out;
 
           &:hover {
-            color: v.$bright-cyan;
+            color: v.$lime-green;
           }
         }
   
