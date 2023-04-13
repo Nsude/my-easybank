@@ -1,0 +1,108 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+
+.articles {
+  text-align: center;
+  padding: 100rem 25rem;
+  background-color: v.$very-light-gray;
+
+  h2 {
+    margin-bottom: 30rem;
+    font-size: 27rem;
+    font-weight: 400;
+    letter-spacing: -0.05ch;
+  }
+
+
+  &__container {
+    text-align: left;
+
+
+    >:not(:last-child) {
+      margin-bottom: 50rem;
+    }
+
+    .article {
+
+      div.img {
+        width: 100%;
+        height: 200rem;
+        border-radius: 5rem 5rem 0 0;
+      }
+
+      &__texts {
+        padding: 30rem 30rem 40rem 30rem;
+        background-color: v.$white;
+        border-radius: 0 0 5rem 5rem;
+        max-height: 277.33rem;
+
+
+        h4 {
+          font-size: 10rem;
+          color: v.$grayish_blue;
+          margin-bottom: 15rem;
+          font-weight: 300;
+        }
+  
+        h3 {
+          font-weight: 400;
+          margin-bottom: 15rem;
+          letter-spacing: -0.03ch;
+          transition: all 250ms ease-in-out;
+
+          &:hover {
+            color: v.$bright-cyan;
+          }
+        }
+  
+        p {
+          color: v.$grayish-blue;
+          line-height: 1.5;
+          font-size: 16rem;
+        }
+      }
+
+    }
+  }
+}
+
+
+
+
+@include m.breakpoints-min-max(medium, large) {
+
+
+  .articles {
+
+
+    &__container {
+      display: flex;
+    }
+  }
+
+
+}
+
+
+@include m.breakpoints-min(x-large) {
+
+  .articles {
+    text-align: left;
+    padding: 100rem 60rem;
+    margin-top: -100rem;
+
+    h2 {
+      margin-bottom: 40rem;
+    }
+
+    &__container {
+
+
+      :not(:last-child) {
+        margin-right: 25rem;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
