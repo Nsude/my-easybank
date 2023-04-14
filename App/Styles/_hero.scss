@@ -122,6 +122,18 @@
 
 
 // Media Queries
+@include m.breakpoints-min-max(medium, x-large) {
+  .hero {
+
+
+    &__text {
+      width: 55%;
+      margin-inline: auto;
+    }
+  }
+}
+
+
 @include m.breakpoints-min(x-large) {
 
   .hero {

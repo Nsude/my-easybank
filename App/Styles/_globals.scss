@@ -38,6 +38,7 @@ body {
   // helper class
   .flex {
     display: flex;
+    flex-wrap: wrap;
 
     &-jc-sb {
       justify-content: space-between;

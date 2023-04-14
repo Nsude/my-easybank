@@ -23,33 +23,80 @@ function showmenu() {
   body.classList.toggle('noscroll')
 }
 
-function addFlex(elem) {
+// adds flex direction col
+function addFlexDisplayCol(elem) {
   elem.classList.add('flex-fd-cl');
 }
 
-function removeFlex(elem) {
+// removes flex direction col
+function removeFlexDisplayCol(elem) {
   elem.classList.remove('flex-fd-cl');
 }
 
+// removes all helper classes
+function removeHelpers(elem) {
+  elem.classList.remove('flex');
+  elem.classList.remove('flex-fd-cl');
+  elem.classList.remove('flex-jc-sb');
+}
+
+// adds helper classes
+function addHelpers(elem) {
+  elem.classList.add('flex');
+  elem.classList.add('flex-fd-cl');
+  elem.classList.add('flex-jc-sb');
+}
+
+// prevent adding classes repeatedly
+let exists_D = false;
+let exists_T = false;
+
+
 function checkFlex() {
   if (window.innerWidth >= 1124) {
-    removeFlex(features);
-    removeFlex(articlesCon);
-    removeFlex(footer);
+    removeFlexDisplayCol(features);
+    removeFlexDisplayCol(articlesCon);
+    removeFlexDisplayCol(footer);
+
 
     footer_L.classList.add('flex');
 
+    // add all helper classes to articles con
+    // prevent adding classes repeatedly
+    if (exists_D == false) {
+      addHelpers(articlesCon);
+      
+      // add all helper classes from features
+      addHelpers(features);
 
-  } else if (window.innerWidth > 1123) {
-    addFlex(articlesCon);
+      exists_D = true;
+    }
 
-  } else {
-    addFlex(features);
-    addFlex(footer);
+    
+    
+    exists_T = false;
+
+  } else if (window.innerWidth <= 1123) {
+    addFlexDisplayCol(footer);
     
     footer_L.classList.remove('flex');
 
-  }
+
+    if(exists_T == false) {
+      // remove all helper classes from articles con
+      removeHelpers(articlesCon);
+
+      // remove all helper classes from features
+      removeHelpers(features); 
+
+      exists_T = true;      
+    }
+    
+
+    
+
+    exists_D = false;
+  } 
 }
 
 setInterval(checkFlex, 1)

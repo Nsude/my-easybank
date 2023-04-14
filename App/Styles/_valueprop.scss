@@ -48,6 +48,32 @@
 }
 
 
+@include m.breakpoints-min-max(medium, x-large) {
+
+ .value-prop {
+  // padding: 50rem 80rem;
+
+  .value-title {
+
+    width: 55%;
+    margin: 0 auto;
+  }
+
+  .features {
+    display: flex;
+    flex-direction: row;
+    gap: 20rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    &__item {
+      flex-basis: 40%;
+    }
+  }
+ }
+}
+
+
 @include m.breakpoints-min(x-large) {
 
   .value-prop {
@@ -72,8 +98,6 @@
   }
 
   .features {
-    flex-direction: row;
-    column-gap: 20rem;
 
 
     &__item {
