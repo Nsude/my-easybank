@@ -24,18 +24,17 @@
 
   &__image {
     width: 100%;
-    height: 305rem;
-    overflow: hidden;
     margin-bottom: 30rem;
+    overflow: hidden;
 
     .bg-pattern {
       position: relative;
       width: 100%;
-      height: 350rem;
+      height: 420rem;
       background: url('/images/bg-intro-mobile.svg');
       background-size: cover;
       background-position: center;
-      transform: translateY(-5%);
+      transform: translateY(-30rem);
     }
 
 
@@ -121,9 +120,17 @@
 
 
 // Media Queries
+
+// Tablet view
 @include m.breakpoints-min-max(medium, x-large) {
   .hero {
 
+    &__image {
+
+      .phone-mockups {
+        top: 7%;
+      }
+    }
 
     &__text {
       width: 55%;
@@ -132,7 +139,7 @@
   }
 }
 
-
+// Desktop view
 @include m.breakpoints-min(x-large) {
 
   .hero {
@@ -145,20 +152,20 @@
     margin-bottom: 0rem;
 
     &__image {
-      height: 100%;
+      height: 700rem;
 
       .bg-pattern {
-        height: 855rem;
+        height: 850rem;
         background: url('/images/bg-intro-desktop.svg');
         background-size: cover;
         background-position: bottom left;
-        transform: translateY(-24%);
+        transform: translateY(-180rem);
 
         .phone-mockups {
           top: 8%;
           background-position: top;
           width: 110%;
-          height: 97.8%;
+          height: 97%;
           background-size: contain;
           transform: translateX(-33%);
         }

@@ -115,7 +115,7 @@ function desktopMakeResp() {
       article.style = `flex-basis: 23.3%;`
     })
 
-  } else if(window.innerWidth > 700 && window.innerWidth < 1123) {
+  } else if(window.innerWidth > 699 && window.innerWidth < 1123) {
     articles.forEach(article => {
       article.style = `flex-basis: `;
     })
