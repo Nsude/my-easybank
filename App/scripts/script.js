@@ -109,15 +109,20 @@ const articles = document.querySelectorAll('.article');
 
 function desktopMakeResp() {
 
-  if (window.innerWidth < 1240) {
+  if (window.innerWidth > 1240) {
 
     articles.forEach(article => {
-      article.style = `flex-basis: 30%;`
+      article.style = `flex-basis: 23.3%;`
+    })
+
+  } else if(window.innerWidth > 700 && window.innerWidth < 1123) {
+    articles.forEach(article => {
+      article.style = `flex-basis: `;
     })
 
   } else {
     articles.forEach(article => {
-      article.style = `flex-basis: 23.3%`
+      article.style = `flex-basis: 30%`
     })
   }
 }

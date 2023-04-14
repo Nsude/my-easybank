@@ -83,15 +83,18 @@
   .articles {
     padding: 80rem 80rem;
 
+    h2 {
+      margin-bottom: 40rem;
+    }
 
     &__container {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: space-evenly;
 
 
       .article {
-        flex-basis: 40%;
+        flex-basis: 43%;
       }
     }
   }
@@ -116,10 +119,6 @@
       >:not(:last-child) {
         margin-right: 25rem;
         margin-bottom: 40rem;
-      }
-
-      .article {
-        flex-basis: 23%;
       }
     }
   }

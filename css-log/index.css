@@ -439,13 +439,16 @@ header .turn-x > :last-child {
   .articles {
     padding: 80rem 80rem;
   }
+  .articles h2 {
+    margin-bottom: 40rem;
+  }
   .articles__container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
   .articles__container .article {
-    flex-basis: 40%;
+    flex-basis: 43%;
   }
 }
 @media (min-width: 1124px) {
@@ -460,9 +463,6 @@ header .turn-x > :last-child {
   .articles__container > :not(:last-child) {
     margin-right: 25rem;
     margin-bottom: 40rem;
-  }
-  .articles__container .article {
-    flex-basis: 23%;
   }
 }
 footer {
