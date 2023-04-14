@@ -9,6 +9,8 @@ const footer_L = document.querySelector('.footer-L');
 
 menu.addEventListener('click', showmenu);
 
+
+// controls the hamburger menu
 function showmenu() {
   // toggle turn-x class
   menu.classList.toggle('turn-x')
@@ -99,8 +101,29 @@ function checkFlex() {
   } 
 }
 
-setInterval(checkFlex, 1)
+// calls checkflex forever
+setInterval(checkFlex, 1);
 
 
+const articles = document.querySelectorAll('.article');
+
+function desktopMakeResp() {
+
+  if (window.innerWidth < 1240) {
+
+    articles.forEach(article => {
+      article.style = `flex-basis: 30%;`
+    })
+
+  } else {
+    articles.forEach(article => {
+      article.style = `flex-basis: 23.3%`
+    })
+  }
+}
+
+
+// calls desktopMakeResp forever
+setInterval(desktopMakeResp, 1);
 
 

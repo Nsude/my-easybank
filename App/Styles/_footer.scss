@@ -20,6 +20,13 @@ footer {
         :not(:last-child) {
           margin-right: 10rem;
         }
+
+        svg {
+
+          path {
+            transition: all 250ms ease-in-out;
+          }
+        }
         
         a:hover {
           
@@ -75,32 +82,38 @@ footer {
     padding: 50rem 60rem;
 
 
-  .footer-L {
-    
-    .social-links-con {
-      margin-right: 120rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+    .footer-L {
+      
+      .social-links-con {
+        margin-right: 120rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
-    }
+      }
 
 
-    .nav-links-L, 
-    .nav-links-R {
-      align-items: start;
-      margin-bottom: 0;
-
-      a:last-child {
+      .nav-links-L, 
+      .nav-links-R {
+        align-items: start;
         margin-bottom: 0;
+
+        a:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .nav-links-L {
+        margin: 0 50rem 0 0;
+        
       }
     }
 
-    .nav-links-L {
-      margin: 0 50rem 0 0;
-      
+    .footer-R {
+      text-align: right;
     }
-  }
+
+
   }
 
 }
