@@ -110,3 +110,29 @@ body {
 .noscroll {
   overflow: hidden;
 }
+
+
+// Animations
+.fade-in {
+  animation: fadeIn 1500ms ease-in-out forwards;
+}
+
+
+@keyframes fadeIn {
+
+  from {
+    opacity: 0;
+    transform: translateY(65px);
+  }
+
+  60% {
+    opacity: 0.6;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  
+}

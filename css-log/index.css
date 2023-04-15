@@ -84,6 +84,24 @@ body .gradient-button:active {
   overflow: hidden;
 }
 
+.fade-in {
+  animation: fadeIn 1500ms ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(65px);
+  }
+  60% {
+    opacity: 0.6;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 header {
   padding: 25rem 20rem;
   background-color: hsl(0, 0%, 100%);
@@ -315,6 +333,27 @@ header .turn-x > :last-child {
     width: 75%;
   }
 }
+.reveal-down {
+  animation: RevealDown 1000ms ease-in-out forwards;
+}
+
+@keyframes RevealDown {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 99% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 99% 0, 0 0);
+    opacity: 0;
+  }
+  70% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 81%, 0 81%);
+            clip-path: polygon(0 0, 100% 0, 100% 81%, 0 81%);
+    opacity: 0.75;
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 1;
+  }
+}
 .value-prop {
   text-align: center;
   background-color: hsl(220, 16%, 96%);
@@ -336,6 +375,9 @@ header .turn-x > :last-child {
 }
 .value-prop .value-title p {
   margin-bottom: 60rem;
+}
+.value-prop .features {
+  opacity: 0;
 }
 .value-prop .features__item h3 {
   font-size: 20rem;
@@ -400,6 +442,7 @@ header .turn-x > :last-child {
 }
 .articles__container .article {
   transition: all 250ms ease-in-out;
+  opacity: 0;
 }
 .articles__container .article:hover {
   cursor: pointer;
@@ -466,6 +509,9 @@ header .turn-x > :last-child {
   .articles__container > :not(:last-child) {
     margin-right: 25rem;
     margin-bottom: 40rem;
+  }
+  .articles__container .article {
+    opacity: 1;
   }
 }
 footer {

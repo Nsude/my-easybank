@@ -25,6 +25,7 @@
 
     .article {
       transition: all 250ms ease-in-out;
+      opacity: 0;
 
       &:hover {
         cursor: pointer;
@@ -119,6 +120,10 @@
       >:not(:last-child) {
         margin-right: 25rem;
         margin-bottom: 40rem;
+      }
+
+      .article {
+        opacity: 1;
       }
     }
   }
