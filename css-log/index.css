@@ -333,27 +333,6 @@ header .turn-x > :last-child {
     width: 75%;
   }
 }
-.reveal-down {
-  animation: RevealDown 1000ms ease-in-out forwards;
-}
-
-@keyframes RevealDown {
-  from {
-    -webkit-clip-path: polygon(0 0, 100% 0, 99% 0, 0 0);
-            clip-path: polygon(0 0, 100% 0, 99% 0, 0 0);
-    opacity: 0;
-  }
-  70% {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 81%, 0 81%);
-            clip-path: polygon(0 0, 100% 0, 100% 81%, 0 81%);
-    opacity: 0.75;
-  }
-  to {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    opacity: 1;
-  }
-}
 .value-prop {
   text-align: center;
   background-color: hsl(220, 16%, 96%);

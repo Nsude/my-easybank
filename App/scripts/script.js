@@ -1,3 +1,4 @@
+// ################## Varianles Used ##################
 const menu = document.querySelector('#hamburger');
 const heroSection = document.querySelector('.hero');
 const body = document.querySelector('body');
@@ -7,10 +8,11 @@ const articlesCon = document.querySelector('.articles__container');
 const footer = document.querySelector('footer');
 const footer_L = document.querySelector('.footer-L');
 
+// for the dropdown functionality
 menu.addEventListener('click', showmenu);
 
 
-// controls the hamburger menu
+// code for rendering the dropdown menu
 function showmenu() {
   // toggle turn-x class
   menu.classList.toggle('turn-x')
@@ -53,7 +55,7 @@ function addHelpers(elem) {
 let exists_D = false;
 let exists_T = false;
 
-
+// for the tablet view media queries
 function checkFlex() {
   if (window.innerWidth >= 1124) {
     removeFlexDisplayCol(features);
@@ -104,7 +106,7 @@ function checkFlex() {
 // calls checkflex forever
 setInterval(checkFlex, 1);
 
-
+// all article elements
 const articles = document.querySelectorAll('.article');
 
 function desktopMakeResp() {

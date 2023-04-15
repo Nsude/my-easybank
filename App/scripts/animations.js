@@ -25,40 +25,9 @@ function animate(entries, featuresObserver) {
 featuresObserver.observe(features);
 
 
-// ############### Not Used ###############
-
-// hero-section Animations
-// const hero_image = document.querySelector('.hero__image');
-// const hero_text = document.querySelector('.hero__text');
-
-
-// const hero_observerSL = new IntersectionObserver(animateHero);
-
-// function animateHero(entries, hero_observerSL) {
-
-//   entries.forEach(entry => {
-//     let e = entry.target;
-
-//     if(!entry.isIntersecting) {
-//       return;
-//     } else {
-//       e.classList.add('reveal-down');
-
-//       hero_text.classList.add('reveal-up');
-
-//       hero_observerSL.unobserve(e);
-//     }
-//   })
-  
-// }
-
-// hero_observerSL.observe(hero_image);
-
-// #########################################
-
-
 const articles = document.querySelectorAll('.article');
 
+// animations for the articles section using intersection observer API
 const art_ops = {
   threshold: 0.7,
   rootMargin: "0px 0px 300px 0px"
@@ -69,6 +38,7 @@ const articles_ob = new IntersectionObserver(animateArticles, art_ops);
 
 function animateArticles(entries, articles_ob) {
 
+  // ensure we're not on the desktop view
   if (window.innerWidth > 1123) {
     return;
   } 
@@ -86,6 +56,7 @@ function animateArticles(entries, articles_ob) {
 
 }
 
+// observe all articles
 articles.forEach(article => {
   articles_ob.observe(article);
 })

@@ -1,6 +1,8 @@
 @use "variables" as v;
 @use "mixins" as m;
 
+
+
 .value-prop {
   text-align: center;
   background-color: v.$light-grayish_blue;
@@ -49,6 +51,10 @@
 }
 
 
+
+// <!-- ################## Media Queries ################## -->
+
+// Tablet View
 @include m.breakpoints-min-max(medium, x-large) {
 
  .value-prop {
@@ -75,6 +81,7 @@
 }
 
 
+// Desktop View
 @include m.breakpoints-min(x-large) {
 
   .value-prop {

@@ -119,7 +119,7 @@
 }
 
 
-// Media Queries
+// <!-- ################## Media Queries ################## -->
 
 // Tablet view
 @include m.breakpoints-min-max(medium, x-large) {
@@ -191,30 +191,5 @@
   }
 }
 
-
-// Animations
-.reveal-down {
-  animation: RevealDown 1000ms ease-in-out forwards;
-}
-
-
-@keyframes RevealDown {
-  
-  from {
-    clip-path: polygon(0 0, 100% 0, 99% 0, 0 0);
-    opacity: 0;
-  }
-
-  70% {
-    clip-path: polygon(0 0, 100% 0, 100% 81%, 0 81%);
-    opacity: 0.75;
-  }
-
-  to {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    opacity: 1;
-  }
-
-}
 
 

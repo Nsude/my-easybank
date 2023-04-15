@@ -81,7 +81,7 @@ header {
 
 }
 
-
+// <!-- ################## FadeOut animation for Hamburger Menu ################## -->
 @keyframes fadeOut {
   from {
     transform: translateX(0);
@@ -102,14 +102,16 @@ header {
 
 
 
-// Media Queries
+// <!-- ################## Media Queries ################## -->
+
+// Tablet View
 @include m.breakpoints-min-max(medium, x-large) {
   header {
     padding: 25rem 80rem;
   }
 }
 
-
+// Desktop View
 @include m.breakpoints-min(x-large) {
   body {
     padding: 94rem 0 0 0;
