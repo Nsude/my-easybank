@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "homepage": "https://nsude.github.io/my-easybank",
   "dependencies": {
     "gh-pages": "^5.0.0"
   }
