@@ -1,0 +1,22 @@
+// Primary Colours
+$dark-blue: hsl(233, 26%, 24%);
+$lime-green: hsl(136, 65%, 51%);
+$bright-cyan: hsl(192, 70%, 51%);
+
+// Neutral Colours
+$grayish-blue: hsl(233, 8%, 62%);
+$light-grayish_blue: hsl(220, 16%, 96%);
+$very-light_gray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+
+
+// Gradients
+$green-cyan-gradient: linear-gradient(to right, $lime-green, $bright-cyan);
+$darkblue-lightblue: linear-gradient(to bottom, $dark-blue, $very-light_gray);
+
+
+// paddings
+$body-padding-mobile: 25rem 20rem;
+$body-padding-desktop: 25rem 60rem;
+

@@ -1,0 +1,138 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+
+// contains global syles 
+html {
+  font-size: 6.25%;
+  box-sizing: border-box;
+}
+
+
+*, 
+*::before, 
+*::after{
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+body {
+  font-size: 18rem;
+  font-weight: 300;
+  font-family: 'Public Sans', sans-serif;
+  background-color: v.$white;
+  color: v.$dark-blue;
+  padding: 74rem 0 0 0;
+  line-height: 1.1;
+
+
+  a, a:visited, a:active {
+    text-decoration: none;
+    color: v.$black;
+    width: fit-content;
+    cursor: pointer;
+  }
+
+  // <!-- ################## Helper classes ################## -->
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-jc-sb {
+      justify-content: space-between;
+    }
+
+    &-ji-c {
+      justify-items: center;
+    }
+
+    &-ai-c {
+      align-content: center;
+      align-items: center;
+    }
+
+    &-fd-cl {
+      flex-direction: column;
+    }
+
+    &-ji-l {
+      justify-items: left;
+      justify-content: left;
+    }
+  }
+
+
+  .gradient-button {
+    height: 44rem;
+    width: 163rem;
+    background-image: v.$green-cyan-gradient;
+    border: none;
+    border-radius: 25rem;
+    color: v.$white;
+    font-weight: 400;
+
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.75;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
+// <!-- ################## Helper classes for Media Queries ################## -->
+.hide-for-mobile {
+  @include m.breakpoints-max(medium) {
+    display: none;
+  }
+}
+
+
+.hide-for-tablet {
+  @include m.breakpoints-min-max(medium, large) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include m.breakpoints-min(x-large) {
+    display: none;
+  }
+}
+
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
+
+// <!-- ################## Animations ################## -->
+.fade-in {
+  animation: fadeIn 1500ms ease-in-out forwards;
+}
+
+
+@keyframes fadeIn {
+
+  from {
+    opacity: 0;
+    transform: translateY(65px);
+  }
+
+  60% {
+    opacity: 0.6;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  
+}
